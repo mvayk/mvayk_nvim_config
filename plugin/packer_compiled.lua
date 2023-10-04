@@ -79,10 +79,31 @@ _G.packer_plugins = {
     path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["arshamiser.nvim"] = {
+    config = { "\27LJ\2\nÄ\2\0\0\4\0\16\0\0256\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\0016\0\4\0'\2\5\0B\0\2\0016\0\6\0006\1\4\0'\3\b\0B\1\2\0029\1\t\1=\1\a\0006\0\0\0009\0\n\0'\1\v\0=\1\t\0006\0\0\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0B\0\3\1K\0\1\0004%{%v:lua.require(\"arshamiser.tabline\").draw()%}\ftabline\20nvim_set_option\bapi\28v:lua.custom_foldtext()\bopt\rfoldtext\23arshamiser.folding\20custom_foldtext\a_G\25arshamiser.feliniser\frequire\21arshamiser_light\16colorscheme\bcmd\bvim\0" },
+    loaded = true,
+    path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\arshamiser.nvim",
+    url = "https://github.com/arsham/arshamiser.nvim"
+  },
+  ["arshlib.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\arshlib.nvim",
+    url = "https://github.com/arsham/arshlib.nvim"
+  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\feline.nvim",
+    url = "https://github.com/famiu/feline.nvim"
+  },
+  ["heirline.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\heirline.nvim",
+    url = "https://github.com/rebelot/heirline.nvim"
   },
   ["lsp-zero.nvim"] = {
     loaded = true,
@@ -109,6 +130,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["rose-pine"] = {
     loaded = true,
     path = "C:\\Users\\whc\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\rose-pine",
@@ -117,6 +143,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: arshamiser.nvim
+time([[Config for arshamiser.nvim]], true)
+try_loadstring("\27LJ\2\nÄ\2\0\0\4\0\16\0\0256\0\0\0009\0\1\0009\0\2\0'\2\3\0B\0\2\0016\0\4\0'\2\5\0B\0\2\0016\0\6\0006\1\4\0'\3\b\0B\1\2\0029\1\t\1=\1\a\0006\0\0\0009\0\n\0'\1\v\0=\1\t\0006\0\0\0009\0\f\0009\0\r\0'\2\14\0'\3\15\0B\0\3\1K\0\1\0004%{%v:lua.require(\"arshamiser.tabline\").draw()%}\ftabline\20nvim_set_option\bapi\28v:lua.custom_foldtext()\bopt\rfoldtext\23arshamiser.folding\20custom_foldtext\a_G\25arshamiser.feliniser\frequire\21arshamiser_light\16colorscheme\bcmd\bvim\0", "config", "arshamiser.nvim")
+time([[Config for arshamiser.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

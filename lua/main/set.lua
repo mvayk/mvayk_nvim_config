@@ -8,6 +8,6 @@ vim.opt.smartindent = true
 vim.opt.wrap = false
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
-
 vim.opt.termguicolors = true
 vim.api.nvim_set_option("clipboard", "unnamed")
+vim.o.exrc = true

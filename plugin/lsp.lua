@@ -1,4 +1,8 @@
 local cmp = require("cmp")
+local mason = require("mason")
+local rblxlsp = require("luau-lsp")
+local lspconfig = require("lspconfig")
+
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 cmp.setup({
@@ -35,6 +39,43 @@ cmp.setup.cmdline(":", {
     }),
 })
 
+rblxlsp.setup()
+
+mason.setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})
+
+require("neodev").setup({})
+
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require("lspconfig").lua_ls.setup { capabilities = capabilities }
-require("lspconfig").clangd.setup { capabilities = capabilities }
+require("mason-lspconfig").setup()
+require("mason-lspconfig").setup_handlers {
+    luau_lsp = function()
+        require("luau-lsp").setup { capabilities = capabilities }
+    end,
+    lspconfig.lua_ls.setup { capabilities = capabilities },
+    lspconfig.clangd.setup { capabilities = capabilities },
+}
+
+rblxlsp.setup {
+  server = {
+    settings = {
+      -- https://github.com/folke/neoconf.nvim/blob/main/schemas/luau_lsp.json
+      ["luau-lsp"] = {
+        completion = {
+          imports = {
+            enabled = true, -- enable auto imports
+          },
+        },
+      },
+    },
+  },
+}
+
+rblxlsp.config {}

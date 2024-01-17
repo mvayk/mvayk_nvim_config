@@ -11,3 +11,4 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 vim.api.nvim_set_option("clipboard", "unnamed")
 vim.o.exrc = true
+vim.opt["guicursor"] = "i:block"

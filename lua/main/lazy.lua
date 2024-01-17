@@ -21,6 +21,8 @@ require("lazy").setup({
     {'williamboman/mason-lspconfig.nvim'},
     {'nvim-treesitter/nvim-treesitter'},
     {'neovim/nvim-lspconfig'},
+    {'onsails/lspkind.nvim', dependencies = {"hrsh7th/nvim-compe", "hrsh7th/vim-vsnip", "hrsh7th/vim-vsnip-integ", "metalelf0/jellybeans-nvim"} },
+    {'Exafunction/codeium.nvim', dependencies = {"nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp"}},
     {'mfussenegger/nvim-lint'},
     {'folke/neodev.nvim'},
     {'hrsh7th/nvim-cmp'},

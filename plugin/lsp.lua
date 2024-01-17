@@ -61,6 +61,7 @@ require("mason-lspconfig").setup_handlers {
     end,
     lspconfig.lua_ls.setup { capabilities = capabilities },
     lspconfig.clangd.setup { capabilities = capabilities },
+    lspconfig.luau_lsp.setup { capabilities = capabilities },
 }
 
 rblxlsp.setup {

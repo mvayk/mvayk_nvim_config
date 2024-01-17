@@ -19,6 +19,7 @@ require("lazy").setup({
     {"lopi-py/luau-lsp.nvim", dependencies = { "nvim-lua/plenary.nvim", } },
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
+    {'nvim-treesitter/nvim-treesitter'},
     {'neovim/nvim-lspconfig'},
     {'mfussenegger/nvim-lint'},
     {'folke/neodev.nvim'},

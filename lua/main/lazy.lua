@@ -13,19 +13,40 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+    --> Aesthetic
     {'folke/tokyonight.nvim', lazy = false},
+    {'ellisonleao/gruvbox.nvim'},
+    {'bluz71/vim-nightfly-colors'},
     {'nvim-lualine/lualine.nvim', dependencies = {'nvim-tree/nvim-web-devicons'}},
+    {'goolord/alpha-nvim'},
+    {'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+    {'rcarriga/nvim-notify'},
+    {'catppuccin/nvim', name = 'catpuccin'},
+    {'rebelot/kanagawa.nvim'},
+    {'rose-pine/neovim', name = 'rose-pine'},
+    {'EdenEast/nightfox.nvim'},
+    {'kepano/flexoki-neovim', name = "flexoki"},
+    {'Enonya/yuyuko.vim'},
+
+    --> Functional
     {'nvim-telescope/telescope.nvim', tag = '0.1.5', dependencies = {'nvim-lua/plenary.nvim'}},
-    {"lopi-py/luau-lsp.nvim", dependencies = { "nvim-lua/plenary.nvim", } },
+    {'Exafunction/codeium.vim', dependencies = {"nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp"}},
+    { "folke/noice.nvim",
+      event = "VeryLazy",
+      dependencies = {
+        "MunifTanjim/nui.nvim",
+        "rcarriga/nvim-notify",
+        }
+    },
+
+    --> LSP / Codecompletion
+    {"lopi-py/luau-lsp.nvim", dependencies = {"nvim-lua/plenary.nvim"}},
     {'williamboman/mason.nvim'},
     {'williamboman/mason-lspconfig.nvim'},
-    {'nvim-treesitter/nvim-treesitter'},
     {'neovim/nvim-lspconfig'},
-    {'Exafunction/codeium.vim', dependencies = {"nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp"}},
     {'mfussenegger/nvim-lint'},
     {'folke/neodev.nvim'},
     {'hrsh7th/nvim-cmp'},
-    {'onsails/lspkind.nvim'},
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/cmp-buffer'},
     {'hrsh7th/cmp-path'},
@@ -35,5 +56,4 @@ require("lazy").setup({
     {'hrsh7th/cmp-nvim-lsp-signature-help'},
     {'L3MON4D3/LuaSnip'},
     {'saadparwaiz1/cmp_luasnip'},
-    {'goolord/alpha-nvim'},
 })

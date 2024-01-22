@@ -1,3 +1,5 @@
+--> TODO fix everything and organize this mess and understand what is happening
+
 local cmp = require("cmp")
 local mason = require("mason")
 local rblxlsp = require("luau-lsp")

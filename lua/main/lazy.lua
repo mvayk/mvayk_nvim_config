@@ -38,6 +38,10 @@ require("lazy").setup({
         "rcarriga/nvim-notify",
         }
     },
+    {
+      "folke/todo-comments.nvim",
+      dependencies = { "nvim-lua/plenary.nvim" },
+    },
 
     --> LSP / Codecompletion
     {"lopi-py/luau-lsp.nvim", dependencies = {"nvim-lua/plenary.nvim"}},

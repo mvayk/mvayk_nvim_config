@@ -71,21 +71,31 @@ require("mason-lspconfig").setup_handlers {
     lspconfig.lua_ls.setup { settings = {Lua = {diagnostics = {globals = { "vim" }}, disable = {"missing-fields"}}}, capabilities = capabilities },
     lspconfig.clangd.setup { capabilities = capabilities },
     lspconfig.pyre.setup { capabilities = capabilities },
-}
-
-rblxlsp.setup {
-  server = {
-    settings = {
-      -- https://github.com/folke/neoconf.nvim/blob/main/schemas/luau_lsp.json
-      ["luau-lsp"] = {
-        completion = {
-          imports = {
-            enabled = true, -- enable auto imports
+--  rblxlsp.setup({ types = {roblox = true}, capabilities = capabilities })
+    luau_lsp = function()
+        require("luau-lsp").setup {
+          sourcemap = {
+            enabled = true,
+            autogenerate = true, -- automatic generation when the server is attached
+            rojo_project_file = "default.project.json"
           },
-        },
-      },
-    },
-  },
+          types = {
+            roblox = true,
+            roblox_security_level = "PluginSecurity",
+          },
+          server = {
+            settings = {
+              -- https://github.com/folke/neoconf.nvim/blob/main/schemas/luau_lsp.json
+              ["luau-lsp"] = {
+                completion = {
+                  imports = {
+                    enabled = true, -- enable auto imports
+                  },
+                },
+              },
+            },
+          },
+          capabilities = capabilities,
+        }
+    end,
 }
-
-rblxlsp.config {}
